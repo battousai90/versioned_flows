@@ -1,5 +1,6 @@
 flows:
-  c482fb38-6cd3-48be-9410-f732eef3c223: {ver: 1, file: CoindeckApi.snapshot, comments: '',
-    author: anonymous, created: 1676714732985, flowName: CoindeckApi, flowDesc: ''}
+  c482fb38-6cd3-48be-9410-f732eef3c223: {ver: 2, file: CoindeckApi.snapshot, comments: addind
+      error log, author: anonymous, created: 1676714860553, flowName: CoindeckApi,
+    flowDesc: ''}
 layoutVer: 1
 bucketId: 26967018-ea6d-4d6b-bc53-72ad7eb760e0

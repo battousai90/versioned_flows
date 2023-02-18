@@ -49,6 +49,39 @@
           "destination" : {
             "comments" : "",
             "groupId" : "94466600-2ed5-3615-a470-a0f13cf334ef",
+            "id" : "810fb954-9b05-3ce1-b3a5-c62817cfbedd",
+            "instanceIdentifier" : "63fd963e-0186-1000-c1d3-6d6106690824",
+            "name" : "LogMessage",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "94466600-2ed5-3615-a470-a0f13cf334ef",
+          "identifier" : "a7c54a3d-97a3-3846-abf1-1d8ad13e27da",
+          "instanceIdentifier" : "63fdad46-0186-1000-be0a-4c4f0731ed18",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "failure" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "94466600-2ed5-3615-a470-a0f13cf334ef",
+            "id" : "8de05c99-7ab5-33d0-bca8-4fe934a7050e",
+            "instanceIdentifier" : "63d90b11-0186-1000-87b5-56a9f6990716",
+            "name" : "PutMongo",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "94466600-2ed5-3615-a470-a0f13cf334ef",
             "id" : "f2d3dc1a-355f-3e8c-b51a-5cc0f90691da",
             "instanceIdentifier" : "63ef95ff-0186-1000-7bb7-22b8bf8c9b00",
             "name" : "RunMongoAggregation",
@@ -71,6 +104,39 @@
             "id" : "8de05c99-7ab5-33d0-bca8-4fe934a7050e",
             "instanceIdentifier" : "63d90b11-0186-1000-87b5-56a9f6990716",
             "name" : "PutMongo",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "94466600-2ed5-3615-a470-a0f13cf334ef",
+            "id" : "810fb954-9b05-3ce1-b3a5-c62817cfbedd",
+            "instanceIdentifier" : "63fd963e-0186-1000-c1d3-6d6106690824",
+            "name" : "LogMessage",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "94466600-2ed5-3615-a470-a0f13cf334ef",
+          "identifier" : "fbd6554b-c7b4-389c-9c9f-4fab59a9184c",
+          "instanceIdentifier" : "63fdd12d-0186-1000-c225-8cc50b76e1ba",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "failure" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "94466600-2ed5-3615-a470-a0f13cf334ef",
+            "id" : "f2d3dc1a-355f-3e8c-b51a-5cc0f90691da",
+            "instanceIdentifier" : "63ef95ff-0186-1000-7bb7-22b8bf8c9b00",
+            "name" : "RunMongoAggregation",
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
@@ -153,7 +219,63 @@
         },
         "processGroups" : [ ],
         "processors" : [ {
-          "autoTerminatedRelationships" : [ "original", "failure", "results" ],
+          "autoTerminatedRelationships" : [ "success" ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.19.1"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "94466600-2ed5-3615-a470-a0f13cf334ef",
+          "identifier" : "810fb954-9b05-3ce1-b3a5-c62817cfbedd",
+          "instanceIdentifier" : "63fd963e-0186-1000-c1d3-6d6106690824",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "LogMessage",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 824.0,
+            "y" : 600.0
+          },
+          "properties" : {
+            "log-message" : "error",
+            "log-level" : "error"
+          },
+          "propertyDescriptors" : {
+            "log-message" : {
+              "displayName" : "Log message",
+              "identifiesControllerService" : false,
+              "name" : "log-message",
+              "sensitive" : false
+            },
+            "log-level" : {
+              "displayName" : "Log Level",
+              "identifiesControllerService" : false,
+              "name" : "log-level",
+              "sensitive" : false
+            },
+            "log-prefix" : {
+              "displayName" : "Log prefix",
+              "identifiesControllerService" : false,
+              "name" : "log-prefix",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 25,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.LogMessage",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ "original", "results" ],
           "backoffMechanism" : "PENALIZE_FLOWFILE",
           "bulletinLevel" : "WARN",
           "bundle" : {
@@ -173,7 +295,7 @@
           "penaltyDuration" : "30 sec",
           "position" : {
             "x" : 1192.0,
-            "y" : 336.0
+            "y" : 328.0
           },
           "properties" : {
             "mongo-client-service" : "af8db25f-2164-330d-8ee2-65848a6c5ee8",
@@ -573,7 +695,7 @@
           "type" : "org.apache.nifi.processors.standard.InvokeHTTP",
           "yieldDuration" : "1 sec"
         }, {
-          "autoTerminatedRelationships" : [ "failure" ],
+          "autoTerminatedRelationships" : [ ],
           "backoffMechanism" : "PENALIZE_FLOWFILE",
           "bulletinLevel" : "WARN",
           "bundle" : {
