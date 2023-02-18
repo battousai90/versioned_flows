@@ -8,7 +8,40 @@
       "flowContents" : {
         "comments" : "",
         "componentType" : "PROCESS_GROUP",
-        "connections" : [ ],
+        "connections" : [ {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "b9e3885e-2972-3240-91b2-8688b8cd15a8",
+            "id" : "b99cafa3-f45b-39de-b3d9-22ea29191725",
+            "instanceIdentifier" : "5e323eb3-0186-1000-7b0b-c5a39839e12e",
+            "name" : "InvokeHTTP",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "b9e3885e-2972-3240-91b2-8688b8cd15a8",
+          "identifier" : "1a88b37c-005d-3ec6-9b04-d3c8525921de",
+          "instanceIdentifier" : "628d9c50-0186-1000-ca41-20bcabb5d120",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "b9e3885e-2972-3240-91b2-8688b8cd15a8",
+            "id" : "1d473419-3a57-3459-abad-1525162c6f61",
+            "instanceIdentifier" : "5e2e714a-0186-1000-a14d-25e2b0916865",
+            "name" : "GenerateFlowFile",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        } ],
         "controllerServices" : [ ],
         "defaultBackPressureDataSizeThreshold" : "1 GB",
         "defaultBackPressureObjectThreshold" : 10000,
