@@ -1,5 +1,5 @@
 flows:
-  3df0b756-183d-4c07-9082-22a6cc2a18f0: {ver: 1, file: Get_Coindeck.snapshot, comments: '',
-    author: anonymous, created: 1676896851051, flowName: Get Coindeck, flowDesc: ''}
+  3df0b756-183d-4c07-9082-22a6cc2a18f0: {ver: 2, file: Get_Coindeck.snapshot, comments: Adding
+      logs, author: anonymous, created: 1676897011754, flowName: Get Coindeck, flowDesc: ''}
 layoutVer: 1
 bucketId: 24e6212e-5d37-4e72-9744-8bc7448eaf7e
